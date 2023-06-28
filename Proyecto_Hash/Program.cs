@@ -10,15 +10,15 @@ namespace Proyecto_Hash
     {
         static void Main(string[] args)
         {
-            //string[] palabras = new string[3];
-            ListaLigada[] tablaHash = new ListaLigada[7];
+            string[] palabras = new string[3];
+            ListaLigada[] tablaHash = new ListaLigada[5];
 
-            /*
+            
             palabras[0] = "Hol";
             palabras[2] = "Adi";
 
             Console.WriteLine(palabras[0]);
-            */
+            
         }
     }
 }

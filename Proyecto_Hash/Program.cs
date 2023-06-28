@@ -10,17 +10,21 @@ namespace Proyecto_Hash
     {
         static void Main(string[] args)
         {
-            //string[] palabras = new string[3];
-            //ListaLigada[] tablaHash = new ListaLigada[5];
-            TablaHash hash = new TablaHash(5);
+            TablaHash hashTable = new TablaHash(5);
 
-            hash.Add("Hol@");
-            Console.ReadKey();
-            /*palabras[0] = "Hol";
-            palabras[2] = "Adi";
+            Console.WriteLine("=========TABLA HASH=========");
 
-            Console.WriteLine(palabras[0]);
-            */
+            hashTable.Add("Hol@");
+            hashTable.Add("<peroC0moEsP0s1ble>");
+            hashTable.Add("percebes .__.");
+            hashTable.Add("Juan Martinez");
+            hashTable.Add("QueTieneDeBuenoLaTontaTexas");
+            hashTable.Add("Esp3r0 que este b13n :')");
+            hashTable.Add("prueba2");
+            hashTable.Add("prueba4");
+
+            hashTable.Print();
+            Console.ReadLine();
         }
     }
 }

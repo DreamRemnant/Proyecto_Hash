@@ -24,15 +24,30 @@ namespace Proyecto_Hash
                 suma += b;
             }
             int indice = suma % arregloLista.Length;
+
+            if (arregloLista[indice] == null)
+            {
+                arregloLista[indice] = new ListaLigada(charString);
+                return;
+            }
+
             arregloLista[indice].Agregar(charString);
         }
 
         public void Print()
         {
+            int indice = 0;
             foreach (ListaLigada lista in arregloLista)
             {
-                int indice = 0;
-                Console.WriteLine(indice + ":" + lista.ObtenerLista());
+                string valoresLista = "";
+
+                if (lista != null)
+                {
+                    valoresLista = lista.ObtenerLista();
+                }
+                
+                Console.WriteLine(indice + ": " + valoresLista);
+                indice++;
             }
         }
     }

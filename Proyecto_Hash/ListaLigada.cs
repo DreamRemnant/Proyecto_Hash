@@ -3,19 +3,13 @@
     internal class ListaLigada
     {
         Nodo nodoInicial;
-        public ListaLigada()
+        public ListaLigada(string valor)
         {
-            nodoInicial = new Nodo();
+            nodoInicial = new Nodo(valor);
         }
         public void Agregar(string valor)
         {
             Nodo nodoActual = nodoInicial;
-            if (nodoInicial.Valor == "")
-            {
-                nodoInicial.Valor = valor;
-                return;
-            }
-
             while (nodoActual.Siguiente != null)
             {
                 nodoActual = nodoActual.Siguiente;
@@ -32,11 +26,11 @@
         public string ObtenerLista()
         {
             Nodo nodoActual = nodoInicial;
-            string valores = nodoInicial.Valor;
+            string valores = "\""+nodoInicial.Valor+ "\"";
             while (nodoActual.Siguiente != null)
             {
                 nodoActual = nodoActual.Siguiente;
-                valores += "--"+nodoActual.Valor;
+                valores += " -- \"" + nodoActual.Valor+ "\"";
             }
             return valores;
         }
